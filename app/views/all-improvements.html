@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+      <form class="form" action="wall-insulation" method="post">
+
+        <p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+          Does your property meet the 'all improvements made' exemption criteria?
+                </h1>
+              </legend>
+              <div id="changedName-hint" class="govuk-hint">
+            This is where there are no further improvements to make to your property and it remains below an EPC 'E' rating or you have met the £3500 price cap.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id=“all-improvements-done” name=“improvements” type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="all-improvements-done">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id=“all-improvements-notdone” name=“improvements” type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="all-improvements-notdone">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </p>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
