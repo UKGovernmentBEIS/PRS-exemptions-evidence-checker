@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    
+
+      <form class="form" action="/high-cost" method="post">
+
+       
+      
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="exemption-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Which exemption applies to your property?
+                </h1>
+              </legend>
+              <div id="exemption-hint" class="govuk-hint">
+                Select all that apply. Read the <a href="https://www.gov.uk/government/publications/private-rented-sector-minimum-energy-efficiency-standard-exemptions/guidance-on-prs-exemptions-and-exemptions-register-evidence-requirements"> guidance on exemptions</a>.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="payback" name="exemption" type="checkbox" value="payback">
+                  <label class="govuk-label govuk-checkboxes__label" for="payback">
+                   7 year payback
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="all-improvements" name="exemption" type="checkbox" value="all-improvements">
+                  <label class="govuk-label govuk-checkboxes__label" for="all-improvements">
+                    All improvements made
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="wall-insulation" name="exemption" type="checkbox" value="wall-insulation">
+                  <label class="govuk-label govuk-checkboxes__label" for="wall-insulation">
+                    Wall insulation
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="consent" name="exemption" type="checkbox" value="consent">
+                  <label class="govuk-label govuk-checkboxes__label" for="consent">
+                    Consent
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="devaluation" name="exemption" type="checkbox" value="devaluation">
+                  <label class="govuk-label govuk-checkboxes__label" for="devaluation">
+                    Devaluation
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="new-landlord" name="exemption" type="checkbox" value="new-landlord">
+                  <label class="govuk-label govuk-checkboxes__label" for="new-landlord">
+                    New landlord
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
