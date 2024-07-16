@@ -10,25 +10,92 @@
     <div class="govuk-grid-column-two-thirds">
 
       {{ govukPanel({
-        titleText: "Application complete",
-        html: "Your reference number<br><strong>HDJ2123F</strong>"
+        titleText: "You have told us that exemptions apply to your property.",
+        html: "Your reference number<br><strong>HDJ2123G</strong>"
       }) }}
 
       <p>
-        We have sent you a confirmation email.
+        For any exemption, you must provide: 
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>address of the property</li>
+        <li>type of exemption you are registering</li>
+        <li>URL or copy of a valid EPC for the property</li>
+      </ul>
+
+      <p>
+        When registering, you will be asked to select the most relevant exemption for your property. The exemption specific evidence that you will need to submit when registering your exemption is: 
       </p>
 
+
       <h2 class="govuk-heading-m">
-        What happens next
+        New landlord exemption
       </h2>
 
       <p>
-        We've sent your application to Hackney Electoral Register Office.
+        You must also provide:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the date you became the landlord</li>
+        <li>details of which qualifying circumstances apply</li>
+      </ul>
+      <p>
+        You can read <a href=" https://www.gov.uk/government/publications/private-rented-sector-minimum-energy-efficiency-standard-exemptions/guidance-on-prs-exemptions-and-exemptions-register-evidence-requirements#new-landlord-exemption"> the qualifying circumstances for new landlords. </a>
+     
+      </p>
+      <p>
+        This exemption is valid for 6 months from the date you became a landlord.
       </p>
 
+      <h2 class="govuk-heading-m">
+        All improvements made
+      </h2>
+
       <p>
-        They will contact you either to confirm your registration, or to ask for more information.
+        You must also provide:
       </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li> a recommendation report that shows any energy efficiency improvement recommended for the property - this could be an EPC report, a report prepared by a surveyor or a Green Deal report</li>
+        <li> details of all recommended improvements made to the property, including date of installation</li>
+      </ul>
+      
+      <p>
+        This exemption will be valid for 5 years from registering, unless revoked or cancelled.
+
+      </p>
+
+
+      <h2 class="govuk-heading-m">Email this to me</h2>
+
+<form class="form" action="/send-email" method="post">
+  {{ govukInput({
+    label: {
+      text: "Email address",
+      classes: "govuk-label--s"
+    },
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false
+  }) }}
+
+  {{ govukButton({
+    text: "Send email",
+    classes: "govuk-button--secondary"
+  }) }}
+</form>
+
+<button class="govuk-button" data-module="govuk-button" onclick="returnToRegisterExemption()">
+  Close and return to register exemption page
+</button>
+
+<script>
+function returnToRegisterExemption() {
+  window.location.href = 'start';
+}
+</script>
+
       <p>
         <a href="#">
           What did you think of this service?
