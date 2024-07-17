@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+ {{ govukBackLink({
+ text: "Back",
+ href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="devaluation" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Upload evidence of your exemption
+            </h1>
+          </legend>
+          <div id="changedName-hint" class="govuk-hint">
+            <p>You must provide the evidence required for the exemption being registered. If you're unsure what evidence is required,
+            you can use the evidence checker (opens in new window)</p>
+            <p>You can upload up to 10 files. Each file must be no more than 4MB.</p>
+            <p>Files must be in one of these formats: png, pdf, jpg, jpeg, doc or docx.</p>
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="file-upload-1">
+              Upload a file
+            </label>
+            <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

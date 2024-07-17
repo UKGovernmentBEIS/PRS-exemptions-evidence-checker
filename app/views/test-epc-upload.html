@@ -6,60 +6,51 @@
 
 {% block beforeContent %}
   {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
 
 {% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <form class="form" action="/path/of/next/page" method="post">
-
-        <p>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Upload your Energy Performance Certificate (EPC)
-                </h1>
-              </legend>
-              <div id="changedName-hint" class="govuk-hint">
-               <p>You must provide an EPC for the property being registered.</p>
-<h2 class="govuk-heading-m">If your EPC is available online</h2>
- <p>You can use the '[Find an energy certificate](https://www.gov.uk/find-energy-certificate)' (opens in new window) 
-  tool to provide a link to the EPC report for this property.</p> 
-                <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label" for="event-name">
-      Insert URL for your EPC report
-    </label>
-  </h1>
-  <input class="govuk-input" id="event-name" name="eventName" type="text">
-</div>       
-
-<h2 class="govuk-heading-m">If your EPC is not available online</h2>
-  
-<p>You must upload a copy of the EPC for this property. Files must be either png, pdf, jpg, jpeg, doc or docx. The file can not be larger than 4MB.</p>
-              </div>
-           <div class="govuk-form-group">
-  <label class="govuk-label" for="file-upload-1">
-    Upload a file
-  </label>
-  <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
-</div>
-              </div>
-            </fieldset>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/path/of/next/page" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Upload your Energy Performance Certificate (EPC)
+            </h1>
+          </legend>
+          <div id="changedName-hint" class="govuk-hint">
+            <p>You must provide an EPC for the property being registered.</p>
+            <h2 class="govuk-heading-m">If your EPC is available online</h2>
+            <p>You can use the '<a href="https://www.gov.uk/find-energy-certificate" target="_blank">Find an energy certificate</a>' (opens in new window)
+              tool to provide a link to the EPC report for this property.</p>
+            <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--m" for="epc-url">
+                  Insert URL for your EPC report
+                </label>
+              </h3>
+              <input class="govuk-input" id="epc-url" name="epcUrl" type="text">
+            </div>
+            <h2 class="govuk-heading-m">If your EPC is not available online</h2>
+            <p>You must upload a copy of the EPC for this property. Files must be either png, pdf, jpg, jpeg, doc or docx. The file can not be larger than 4MB.</p>
           </div>
-        </p>
-          {{ govukButton({
-          text: "Continue"
-        }) }}
-      </form>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="file-upload-1">
+              Upload a file
+            </label>
+            <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+          </div>
+        </fieldset>
+      </div>
 
-    </div>
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </form>
   </div>
-
+</div>
 {% endblock %}
