@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ PRS exemptions register }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Exemption registered",
+        html: "Your reference number is<br><strong>HDJ2123F</strong>"
+      }) }}
+
+      <p>
+       We have sent you a confirmation email.  
+      </p>
+
+<h2 class="govuk-heading-m">What happens next</h2>
+
+<p>Your exemption is now valid and you can let your property. It will appear on the [exemption register](link to https://prsregister.beis.gov.uk/NdsBeisUi/register-search-exemptions) 
+within 24 hours. If all your evidence was correctly uploaded, the exemption is valid for:</p>
+<ul>
+<li>6 months if you're a new landlord</li>
+<li>5 years for all other exemptions</li>
+
+<h2 class="govuk-heading-m">Review of your exemption</h2>
+
+<p>Your exemption has been sent to the local authority for review. The local authority may review your exemption at any time within the first 12 months. 
+If the evidence required was not uploaded during your registration, they can revoke the exemption. Your local authority will contact you to explain what steps will 
+need to be taken. This may include issuing compliance notices.</p>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    You can be fined up to £1000 for providing false or misleading information on the PRS Exemptions Register. 
+  </strong>
+</div>
+
+<button class="govuk-button" data-module="govuk-button" onclick="returnToRegisterExemption()">
+  View my exemptions
+</button>
+
+<button class="govuk-button" data-module="govuk-button" onclick="returnToRegisterExemption()">
+  Log off and exit
+</button>
+
+<script>
+function returnToRegisterExemption() {
+  window.location.href = 'start';
+}
+</script>
+
+      <p>
+        <a href="#">
+          What did you think of this service?
+        </a> (takes 30 seconds)
+      </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
