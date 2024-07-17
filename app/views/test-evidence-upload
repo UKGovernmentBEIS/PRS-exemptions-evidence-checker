@@ -44,7 +44,9 @@ you can use the evidence checker (opens in new window)</p>
             </fieldset>
           </div>
         </p>
-        <a href="devaluation.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button"> Continue </a>
+          {{ govukButton({
+          text: "Continue"
+        }) }}
       </form>
 
     </div>
