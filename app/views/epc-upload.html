@@ -14,7 +14,7 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="evidence-upload" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -28,13 +28,13 @@
             <p>You can use the '<a href="https://www.gov.uk/find-energy-certificate" target="_blank">Find an energy certificate</a>' (opens in new window)
               tool to provide a link to the EPC report for this property.</p>
             <div class="govuk-form-group">
-              <h3 class="govuk-label-wrapper">
+              
                 <label class="govuk-label govuk-label--m" for="epc-url">
                   Insert URL for your EPC report
                 </label>
-              </h3>
+             
               <input class="govuk-input" id="epc-url" name="epcUrl" type="text">
-            </div>
+            </div><p></p>
             <h2 class="govuk-heading-m">If your EPC is not available online</h2>
             <p>You must upload a copy of the EPC for this property. Files must be either png, pdf, jpg, jpeg, doc or docx. The file can not be larger than 4MB.</p>
           </div>

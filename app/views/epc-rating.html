@@ -16,35 +16,36 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-     
-      <form class="form" action="all-exemptions-domestic" method="post">
+      <form class="form" action="tenancy-type" method="post">
 
         <p>
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Is your property domestic or non-domestic?
+          Is the EPC rating of your property an F or a G?
                 </h1>
               </legend>
+              <div id="changedName-hint" class="govuk-hint">
+                For domestic properties, you must have an EPC if you are renting out the property.
+              </div>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="domestic" name="domestic" type="radio" value="domestic">
-                  <label class="govuk-label govuk-radios__label" for="domestic">
-                    Domestic
+                  <input class="govuk-radios__input" id=“all-improvements-done” name=“improvements” type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="all-improvements-done">
+                    Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="non-domestic" name="domestic" type="radio" value="non-domestic">
-                  <label class="govuk-label govuk-radios__label" for="non-domestic">
-                    Non-domestic
+                  <input class="govuk-radios__input" id=“all-improvements-notdone” name=“improvements” type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="all-improvements-notdone">
+                    No
                   </label>
                 </div>
               </div>
             </fieldset>
           </div>
         </p>
-
         {{ govukButton({
           text: "Continue"
         }) }}
