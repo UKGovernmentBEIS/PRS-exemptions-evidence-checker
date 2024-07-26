@@ -16,24 +16,45 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Address of the property
-      </h1>
+    
 
-      <form class="form" action="epc-upload" method="post">
+      <form class="form" action="property-address2" method="post">
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
+        <div class="govuk-width-container">
+          <h1 class="govuk-heading-l">Address of the property</h1>
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="postcode">
+            Postcode
+          </label>
+          <div id="postcode-hint" class="govuk-hint">
+            For example, AA3 1AB.
+          </div>
+          <input
+            class="govuk-input govuk-!-width-two-thirds" id="postcode" name="postcode" type="text" aria-describedby="postcode-hint">
+          </div>
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="searchString">
+            Building number or name
+          </label>
+          <div id="searchString-hint" class="govuk-hint">
+            For example, 15 or Prospect Cottage.
+          </div>
+          <input
+            class="govuk-input govuk-!-width-two-thirds" id="searchString" name="searchString" type="text" aria-describedby="searchString-hint">
+          </div>
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+          Find address
+          </button>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="#" class="govuk-link">Enter address manually</a></p>
+          </div>
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
 
       </form>
 
+<p></p>
+<p class="govuk-body">
+  <a href="#" class="govuk-link">Save and come back later</a>
+</p>
     </div>
   </div>
 
