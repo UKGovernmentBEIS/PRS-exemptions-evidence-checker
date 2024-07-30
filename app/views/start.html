@@ -37,9 +37,10 @@
       <h1 class="govuk-heading-xl">
         Private rented sector (PRS) exemptions register
       </h1>
-      <p>Guidance on the exemptions register for all private rented properties that cannot comply with the 2018 ‘Minimum Level of Energy Efficiency’ standard (EPC band E).</p>
-      <p><a href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance#find-out-if-your-property-is-covered-by-the-regulations">Find out if your property is covered by the Regulations</a></p>
-      <p>This page applies to both domestic and non-domestic private rented properties in England and Wales. You only need to apply for an exemption if your property is covered by the Domestic Minimum Energy Efficiency Standard (MEES) Regulations. Find out more about these regulations for:</p>
+      <p>Guidance on the exemptions register for all private rented properties that cannot comply with the 2018 ‘Minimum Level of Energy Efficiency’ standard (MEES) 
+        of meeting Energy Performance Certificate (EPC) band E.</p>
+      <p>This page applies to both domestic and non-domestic private rented properties in England and Wales. You only need to apply for an exemption if your property is covered by the 
+        Minimum Energy Efficiency Standard (MEES) Regulations. Find out more about these regulations for:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li><a href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">Domestic properties</a></li>
         <li><a href="https://www.gov.uk/guidance/non-domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">Non-domestic properties</a></li>
@@ -51,43 +52,18 @@
        <a href="https://prsregister.beis.gov.uk/NdsBeisUi/register-search-exemptions">Check the exemptions register. </a> </p>
       
        <h2 class="govuk-heading-m">
-        Understand what evidence you will need
-      </h2>
-      <p>There are various exemptions that apply to the prohibition on letting a property with an energy efficiency rating below E. 
-        Information required for all exemptions:
-        </p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>address of the property</li>
-          <li>type of exemption you are registering</li>
-          <li>copy of a valid EPC for the property</li>
-        </ul>
-
-        <p>You will also need to provide exemption specific evidence. 
-
-          This evidence checker helps to identify what evidence you need to provide when registering an exemption.  
-          </p>
-          {{ govukButton({
-            text: "Check if you need to register for a PRS exemption",
-            href: "epc-required.html",
-            isStartButton: true
-          }) }}
-          <!--{button start}[Check what evidence is needed for PRS exemption](evidence checker link){/button}-->
-         
-          <p>You can also read <a href="https://www.gov.uk/government/publications/private-rented-sector-minimum-energy-efficiency-standard-exemptions/guidance-on-prs-exemptions-and-exemptions-register-evidence-requirements#new-landlord-exemption"> detailed guidance on the exemptions and evidence required.</a>  </p>
-
-       <h2 class="govuk-heading-m">
         Registering an exemption
       </h2>
 
       <p>If your property meets the criteria for any of the exemptions, you will be able to let it once you have registered the exemption on the PRS Exemptions Register.</p>
-      <p>You can use this service to:</p>
+      <p>If you already have an account, you can use this service to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>register an exemption</li>
         <li>manage existing exemptions</li>
       </ul>
       <h3 class="govuk-heading-s">Before you start</h3>
-      <p>You will be asked to create an account as a landlord or agent, if you do not already have an account.</p>
+    
 
       <p>Before you apply, make sure you:</p>
       <ul class="govuk-list govuk-list--bullet">
@@ -116,7 +92,52 @@
         isStartButton: true
       }) }}
       <!--{button start}[Register an exemption](https://prsregister.beis.gov.uk/NdsBeisUi/used-service-before){/button}-->
-     
+
+             <h2 class="govuk-heading-m">
+      Registering a property for the first time or if you need help
+      </h2>
+      <h3 class="govuk-heading-s">If this is the first time registering a property or you're unsure about if the regulations apply</h3>
+      <p>There are various exemptions that apply to the prohibition on letting a property with an energy efficiency rating below E.</p>
+      <p>Read <a href="https://www.gov.uk/government/publications/private-rented-sector-minimum-energy-efficiency-standard-exemptions/guidance-on-prs-exemptions-
+                             and-exemptions-register-evidence-requirements#new-landlord-exemption"> detailed guidance on the exemptions and evidence required.</a>  </p>
+
+       <p>Information required for all exemptions:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>address of the property</li>
+          <li>type of exemption you are registering</li>
+          <li>copy of a valid EPC for the property</li>
+        </ul>
+
+        <p>You will also need to provide exemption specific evidence. </p>
+
+      If you're unsure if your property needs to comply with the MEES regulations or this is your first time registering a property, we've added a few more steps to help make sure this is
+      needed for your property.
+
+        <p>You will be asked to create an account as a landlord or agent, if you do not already have an account.</p>
+
+            <p>You should be aware that:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you cannot amend the evidence and exemption data once you have submitted the application</li>
+        <li>the exemption applies immediately once you have registered</li>
+        <li>you cannot submit more than 10 documents as evidence - each document must be no larger than 4MB</li>
+        <li>documents can be in the formats pdf, png, jpg, jpeg, doc or docx </li>
+      </ul>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          You can be fined up to £1,000 if you provide false or misleading information.
+        </strong>
+      
+          {{ govukButton({
+            text: "Register for a PRS exemption for the first time",
+            href: "epc-required.html",
+            isStartButton: true
+          }) }}
+          <!--{button start}{/button}-->
+         
+       
 
       <h3 class="govuk-heading-s">Assisted digital support to register an exemption</h3>
       <p>If you need assisted digital support to register an exemption please get in touch by <a href="mailto:esnz@cust-serv-details.com">email: esnz@cust-serv-details.com</a> or call the digital helpline on 0800 098 7950.</p>
