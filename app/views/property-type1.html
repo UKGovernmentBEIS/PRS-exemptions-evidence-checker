@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Property type – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+     
+      <form class="form" action="tenancy-type" method="post">
+
+        <p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What type of property are you registering? 
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="domestic" name="domestic" type="radio" value="domestic">
+                  <label class="govuk-label govuk-radios__label" for="domestic">
+                    Domestic
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="non-domestic" name="domestic" type="radio" value="non-domestic">
+                  <label class="govuk-label govuk-radios__label" for="non-domestic">
+                    Non-domestic
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </p>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">More about property types</a>
+      </p>
+    </div>
+  </div>
+
+{% endblock %}
