@@ -1,5 +1,3 @@
-Good so far
-
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
@@ -135,10 +133,69 @@ Good so far
       ]
     }) }}
 
+
+
+<h2 class="govuk-heading-m">Energy Performance Certificate and exemption evidence</h2>
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Upload your EPC"
+      },
+      value: {
+        text: "EPC certificate.pdf"
+      },
+      actions: {
+        items: [
+          {
+            href: "epc-upload",
+            text: "Change",
+            visuallyHiddenText: "epc upload"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Upload your evidence"
+      },
+      value: {
+        html: "Invoice1.doc<br>Invoice2.doc<br>Invoice3.doc"
+      },
+      actions: {
+        items: [
+          {
+            href: "evidence-upload",
+            text: "Change",
+            visuallyHiddenText: "upload evidence"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Details of improvements made"
+      },
+      value: {
+        html: "Somedetail.pdf<br>Someexplanation.doc<br>Somethingimportant.pdf"
+      },
+      actions: {
+        items: [
+          {
+            href: "detail-improvement",
+            text: "Change",
+            visuallyHiddenText: "details of improvements"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
     <form action="/confirmation" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
       {{ govukButton({
-        text: "Accept and send application"
+        text: "Submit exemption registration"
       }) }}
     </form>
 
