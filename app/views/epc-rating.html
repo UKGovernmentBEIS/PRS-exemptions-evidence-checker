@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  EPC rating – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,7 +16,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="tenancy-type" method="post">
+      <form class="form" action="exemption-needed" method="post">
 
         <p>
           <div class="govuk-form-group">
@@ -27,7 +27,7 @@
                 </h1>
               </legend>
               <div id="changedName-hint" class="govuk-hint">
-                For domestic properties, you must have a valid Energy Performance Certificate (EPC) if you are renting out the property on an assured, regulated or domeestic agricultural tenancy.
+                For domestic properties, you must have an EPC if you are renting out the property.
               </div>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
