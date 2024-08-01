@@ -62,9 +62,21 @@
         <li>register an exemption</li>
         <li>manage existing exemptions</li>
       </ul>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          You can be fined up to £1,000 if you provide false or misleading information.
+        </strong>
+      </div>
+      {{ govukButton({
+        text: "Register an exemption",
+        href: "https://prsregister.beis.gov.uk/NdsBeisUi/used-service-before",
+        isStartButton: true
+      }) }}
+      <!--{button start}[Register an exemption](https://prsregister.beis.gov.uk/NdsBeisUi/used-service-before){/button}-->
       <h3 class="govuk-heading-s">Before you start</h3>
-    
-
+  
       <p>Before you apply, make sure you:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>have details of the property (address and type of property)</li>
@@ -79,19 +91,7 @@
         <li>you cannot submit more than 20 documents as evidence - each document must be no larger than 10MB</li>
         <li>documents can be in the formats pdf, png, jpg, jpeg, doc or docx </li>
       </ul>
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-visually-hidden">Warning</span>
-          You can be fined up to £1,000 if you provide false or misleading information.
-        </strong>
-      </div>
-      {{ govukButton({
-        text: "Register an exemption",
-        href: "https://prsregister.beis.gov.uk/NdsBeisUi/used-service-before",
-        isStartButton: true
-      }) }}
-      <!--{button start}[Register an exemption](https://prsregister.beis.gov.uk/NdsBeisUi/used-service-before){/button}-->
+      
 
              <h2 class="govuk-heading-m">
       Registering a property for the first time or if you need help
